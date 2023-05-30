@@ -5,9 +5,9 @@ ini_set("display_startup_errors", 1);
 
 error_reporting(E_ALL);
 
-  require_once("config.php");
+  require_once("estudiante.php");
 
-  $data = new Config;
+  $data = new Estudiante;
 
   $all = $data -> obtainAll();
 
