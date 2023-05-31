@@ -4,14 +4,20 @@
 
         $registrar = new RegistroUser;
 
-        $registrar -> setIdCamper(4);
+        $registrar -> setIdCamper(1);
         $registrar -> setEmail($_POST['email']);
         $registrar -> setUsername($_POST['username']);
         $registrar -> setPassword($_POST['password']);
+        /* $registrar -> insertData();
 
-        $registrar -> insertData();
+        echo "<script>alert('Usuario registrado satisfactoriamente');document.location='loginRegister.php'</script>"; */
 
-        echo "<script>alert('Usuario registrado satisfactoriamente');document.location='loginRegister.php'</script>";
+        if($registrar->checkUser($_POST['email'])){
+            echo "<script>alert('Usuario ya existente, logeate');document.location='loginRegister.php'</script>";
+        }else{
+            $registrar -> insertData();
+            echo "<script>alert('Usuario registrado satisfactoriamente');document.location='../Home/home.php'</script>";
+        }
     }
 
 ?>

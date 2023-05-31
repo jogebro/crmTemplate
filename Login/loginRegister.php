@@ -33,11 +33,11 @@
                       <div id="emailHelp" class="form-text">Mañana es una excusa maravillosa, ¿No crees?</div>
                     </div>
                     <div class="mb-3">
-                    <label for="username" class="form-label">Username </label>
+                    <label for="password" class="form-label">Password </label>
                         <input 
-                          type="text"
-                          id="username"
-                          name="username"
+                          type="password"
+                          id="password"
+                          name="password"
                           class="form-control"  
                         />
                     </div>
